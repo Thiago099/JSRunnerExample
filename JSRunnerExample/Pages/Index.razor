@@ -1,0 +1,11 @@
+﻿@page "/"
+@using JSRunner;
+@inject JS js;
+@code{
+    async Task SayHello()
+    {
+        await js.Run("alert('hello')");
+    }
+}
+
+<button @onclick=SayHello>Say hello</button>
